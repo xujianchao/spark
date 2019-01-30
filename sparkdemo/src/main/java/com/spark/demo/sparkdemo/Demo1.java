@@ -26,7 +26,7 @@ public class Demo1 {
 
 		SparkConf sconf = new SparkConf().setAppName("JavaWordCount");
 		JavaSparkContext jsc = new JavaSparkContext(sconf);
-		System.out.println("================filePath==================="+filePath);
+		System.out.println("=====11===========filePath==================="+filePath);
 		JavaRDD<String> lines = jsc.textFile(filePath);
          System.out.println("=====getNumPartitions==============================================>"+lines.getNumPartitions());
 		JavaRDD<String> jrd = lines.flatMap(new FlatMapFunction<String, String>() {
